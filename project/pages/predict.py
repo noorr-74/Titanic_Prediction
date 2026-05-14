@@ -1,6 +1,10 @@
 import streamlit as st
 import numpy as np
 import joblib
+import os
+import joblib
+
+BASE_DIR = os.path.join(os.path.dirname(__file__), "..")
 
 # ================= PAGE =================
 
@@ -41,22 +45,22 @@ if advanced_mode:
 
 if model_choice == "Logistic Regression":
 
-    model = joblib.load("logistic.pkl")
+    model = joblib.load(os.path.join(BASE_DIR, "logistic.pkl"))
 
 elif model_choice == "Decision Tree":
 
-    model = joblib.load("decision_tree.pkl")
+    model = joblib.load(os.path.join(BASE_DIR, "decision_tree.pkl"))
 
 elif model_choice == "Random Forest":
 
-    model = joblib.load("randomforest.pkl")
+    model = joblib.load(os.path.join(BASE_DIR, "randomforest.pkl"))
 
 else:
 
-    model = joblib.load("svm.pkl")
+    model = joblib.load(os.path.join(BASE_DIR, "svm.pkl"))
 
     # load scaler for svm
-    scaler = joblib.load("scaler.pkl")
+    scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 # ================= INPUTS =================
 

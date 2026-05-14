@@ -13,11 +13,15 @@ st.set_page_config(
 
 # ================= LOAD DATA =================
 
-path = r"C:\Users\youse\Desktop\python for vs\project\Titanic_train.csv.csv"
+path = r"D:\downloads from now\titanic\Titanic_train.csv"
 
 train = pd.read_csv(path)
 
-scores = joblib.load(r"C:\Users\youse\Desktop\python for vs\project\acc.pkl")
+import os
+import joblib
+
+path = os.path.join(os.path.dirname(__file__), "..", "acc.pkl")
+scores = joblib.load(path)
 # ================= BACKGROUND =================
 
 page_bg = """
