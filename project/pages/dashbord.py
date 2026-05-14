@@ -13,7 +13,7 @@ st.set_page_config(
 
 # ================= LOAD DATA =================
 
-path = r"C:\Users\youse\Downloads\Titanic_train.csv.csv"
+path = "C:\Users\youse\Desktop\python for vs\project\Titanic_train.csv.csv"
 
 train = pd.read_csv(path)
 
